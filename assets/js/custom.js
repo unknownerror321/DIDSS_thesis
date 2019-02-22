@@ -32,3 +32,47 @@ var interval = setInterval(function() {
     $('#time-part').html(momentNow.format('hh:mm:ss A'));
 }, 100);
 
+function readURL(input) {
+    var fileInput = document.getElementById('input-img');
+    var filePath = fileInput.value;
+    var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+    if(!allowedExtensions.exec(filePath)){
+        swal("Upload Failed", "Please select a valid image with .jpeg/.jpg/.png/.gif extensions.","warning");
+        fileInput.value = '';
+        return false;
+    } else{
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#img-profile').attr('src', e.target.result);
+                $('#img-profile').hide();
+                $('#img-profile').fadeIn(650);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }   
+}
+
+function fileValidation(){
+    var fileInput = document.getElementById('file');
+    var filePath = fileInput.value;
+    var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+    if(!allowedExtensions.exec(filePath)){
+        swal("Upload Failed", "Please select a valid image with .jpeg/.jpg/.png/.gif extensions.","warning");
+        fileInput.value = '';
+        return false;
+    }else{
+        //Image preview
+        if (fileInput.files && fileInput.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('img-profile').innerHTML = '<img src="'+e.target.result+'"/>';
+            };
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+    }
+}
+  
+$("#input-img").change(function() {
+    readURL(this);
+});

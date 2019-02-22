@@ -6,6 +6,6 @@
 <!-- Scripts Ends -->
 <script src="<?=base_url();?>assets/js/moment.js"></script>
 <script src="<?=base_url();?>assets/js/custom.js"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?=base_url();?>assets/js/datatables.js"></script>
+<script src="<?=base_url();?>assets/js/bootstrap4.js"></script>
 <!-- Scripts Ends --> 

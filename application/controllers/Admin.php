@@ -36,7 +36,8 @@ class Admin extends CI_Controller {
     public function view_students()
 	{	
 		if($this->session->has_userdata('admin_logged')){
-			$this->load->view('admin/students/view_students');
+            $data['get_users'] = $this->admin_model->get_users();
+            $this->load->view('admin/students/view_students', $data);
 		} else {
 			redirect(base_url().'auth');
 		}
@@ -52,8 +53,40 @@ class Admin extends CI_Controller {
 	}
 	
 	public function insert_student(){
-		$newdatas = $this->admin_model->insert_student();
-		redirect(base_url().'admin/view_students');
+        $path = $_FILES['input_img']['name'];
+        $imgName = 'profile_'.uniqid().'.'.pathinfo($path, PATHINFO_EXTENSION);
+        $config = array(
+            'upload_path' => "assets/images/profile",
+            'allowed_types' => "gif|jpg|png|jpeg",
+            'overwrite' => TRUE,
+            'file_name' => $imgName
+        );
+
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
+        $this->upload->set_allowed_types('*');
+
+        // $old_image = $this->input->post('old_image');
+        // if($old_image!='default_img.gif'){
+        // 	unlink("assets/images/profile/".$old_image);
+        // }
+        
+        if (!urldecode($this->upload->do_upload('input_img'))) {
+            $this->session->set_flashdata('error', $this->upload->display_errors());
+            redirect(base_url().'admin/view_students');
+        } else { 
+            $newdatas = $this->admin_model->insert_student($imgName);
+            if($newdatas){
+                $this->session->set_flashdata('success', 'New users was successfully added.');
+                redirect(base_url().'admin/view_students');
+            } else{
+                $this->session->set_flashdata('error', 'There was a problem adding users.');
+                redirect(base_url().'admin/view_students');
+            }
+        }
+			
+		// $newdatas = $this->admin_model->insert_student();
+		// redirect(base_url().'admin/view_students');
 	}
     
     /* Teachers */

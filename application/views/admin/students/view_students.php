@@ -42,33 +42,22 @@
                                     <thead>
                                         <tr>
                                             <th></th>
-                                            <th>First name</th>
+                                            <th>RFID</th>
                                             <th>Last name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
+                                            <th>Firstname</th>
+                                            <th>Gender</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td>Tiger</td>
-                                            <td>Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td>Garrett</td>
-                                            <td>Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>63</td>
-                                            <td>2011/07/25</td>
-                                        </tr>
+                                        <?php foreach($get_users as $users){ extract($users); ?>
+                                            <tr>
+                                                <td><?=$rfid;?></td>
+                                                <td><?=$lastname;?></td>
+                                                <td><?=$firstname;?></td>
+                                                <td><?=$lastname;?></td>
+                                                <td><?=($gender) ? 'Male' : 'Female';?></td>
+                                            </tr>
+                                        <?php } ?>
                                     </tbody>
                                 </table>
                                 </div>

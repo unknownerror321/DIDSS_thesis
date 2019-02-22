@@ -56,7 +56,7 @@
     font-size: 22px !important;
 }
 
-.cust-img img, .cust-img-sec img{
+.cust-img img, .cust-img-sec img, .acc-img img{
     position: absolute !important;
     left: 50% !important;
     top: 50% !important;
@@ -65,6 +65,17 @@
     -webkit-transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
+}
+
+.input-img {
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
 }
 
 .inline-icon {
@@ -114,4 +125,38 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {
 
 .popmsg {
     display: none;
+}
+
+.acc-img {
+    position: relative;
+    width: 175px;
+    height: 175px;
+    overflow: hidden;
+    background: #fff;
+    cursor: pointer;
+    border: 2px solid #8f9090;
+    margin: 10px auto;
+}
+
+
+.acc-img:hover {
+    border: 2px dashed #8f9090;
+    opacity: 0.5;
+}
+
+i.fa.upload-icon {
+    position: absolute;
+    right: 0;
+    left: 52px;
+    height: 100%;
+    top: 40px;
+    width: 100%;
+    opacity: 0;
+    font-size: 70px;
+    color:#797676;
+    cursor: pointer;
+}
+
+.acc-img:hover > i.fa.upload-icon {
+    opacity: 1;
 }

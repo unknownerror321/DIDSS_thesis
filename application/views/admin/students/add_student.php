@@ -47,18 +47,18 @@
                             </div>
                         </div>
                     </div>
-                    <form id="" action="<?php echo base_url().'admin/insert_student'?>" method="post">
+                    <form id="" action="<?php echo base_url().'admin/insert_student'?>" method="post"  enctype="multipart/form-data">
                         <div class="pmd-card pmd-z-depth">
                             <div class="pmd-card-body">
                                 <div class="group-fields clearfix row">
-                                    <div class="image-holder">
-                                    </div>
-                                </div>
-                                <div class="group-fields clearfix row">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                                            <span>Profile Image*</span>
-                                            <input type="file" id="profile_image" name="profile_image" class="form-control" placeholder="RFID No." readonly>
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label text-center">
+                                            <span>Click image to upload*</span>
+                                            <div class="acc-img">
+                                                <img id="img-profile" src="<?=base_url();?>assets/images/profile2.png" alt="Profile Image">
+                                                <i class="fa fa-upload upload-icon"></i>
+                                                <input type="file" name="input_img" class="input-img" id="input-img" required>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -79,7 +79,7 @@
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                         <div class="form-group pmd-textfield pmd-textfield-floating-label">       
                                             <label>Middlename*</label>
-                                            <input type="text" id="stud_mname" name="stud_mname" class="form-control" required>
+                                            <input type="text" id="stud_mname" name="stud_mname" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -110,8 +110,8 @@
                                     </div>
                                 </div>
                             </div>		
-                            <div class="pmd-card-actions">
-                                <button type="submit" class="btn btn-primary next"> Add </button>
+                            <div class="pmd-card-actions text-center">
+                                <button type="submit" class="btn btn-primary next"> Add Student </button>
                             </div>
                         </div> <!-- section content end -->  
                     </form>
