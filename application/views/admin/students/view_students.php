@@ -19,12 +19,12 @@
         <div class="container-fluid full-width-container blank">
             <!-- Title -->
             <h1 class="section-title" id="services">
-                <span>Teachers</span>
+                <span>Students</span>
             </h1><!-- End Title -->
         
             <!--breadcrum start-->
             <ol class="breadcrumb text-left">
-            <li><a href="index.html">Teachers</a></li>
+            <li><a href="index.html">Students</a></li>
             <li class="active">Lists</li>
             </ol><!--breadcrum end-->
         
@@ -32,7 +32,7 @@
                 <!--no table found blank state-->
                 <div class="col-lg-12 col-sm-12 col-xs-12">
                     <div id="card">
-                        <h2>Propeller Data table</h2>
+                        <h2>Students List</h2>
                         <div class="component-box">
                             <!-- table card example -->
                             <div  class="pmd-card pmd-z-depth pmd-card-custom-view">
