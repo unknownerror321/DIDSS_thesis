@@ -12,5 +12,42 @@ class Admin extends CI_Controller {
 		$this->load->view('welcome_message');
 	}
 
+    public function dashboard()
+	{
+		$this->load->view('admin/dashboard');
+    }
+    
+    /* Staffs */
+    public function view_staffs()
+	{
+		$this->load->view('admin/staffs/view_staffs');
+    }
+    
+    public function add_staff()
+	{
+		$this->load->view('admin/staffs/add_staff');
+    }
+    
+    /* Students */
+    public function view_students()
+	{
+		$this->load->view('admin/students/view_students');
+    }
+    
+    public function add_student()
+	{
+		$this->load->view('admin/students/add_student');
+    }
+    
+    /* Teachers */
+    public function view_teachers()
+	{
+		$this->load->view('admin/teachers/view_teachers');
+    }
+    
+    public function add_teacher()
+	{
+		$this->load->view('admin/teachers/add_teacher');
+	}
 
 }
