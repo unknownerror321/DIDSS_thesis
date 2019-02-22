@@ -23,7 +23,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = '';
+
+$serverHost = $_SERVER['HTTP_HOST'];
+$config['base_url'] = ($serverHost!="localhost") ? 'http://'.$_SERVER['HTTP_HOST'].'/' : 'http://localhost/DIDSS/';
+
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +38,7 @@ $config['base_url'] = '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------

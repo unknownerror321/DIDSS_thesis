@@ -1,0 +1,18 @@
+.log-header img.img-responsive {
+    width: 80px;
+}
+
+.navbar-header.log-header {
+    text-align: center;
+    width: 100%;
+}
+
+.centered-text h1 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.text-white{
+    color: #fff;
+}
