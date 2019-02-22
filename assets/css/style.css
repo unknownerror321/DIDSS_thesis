@@ -1,5 +1,5 @@
 .log-header img.img-responsive {
-    width: 80px;
+    width: 90px;
 }
 
 .navbar-header.log-header {
@@ -15,6 +15,101 @@
 
 .text-white{
     color: #fff;
+}
+
+.log-time {
+    margin: 45px 0px 10px 0px;
+    /* padding: 15px 0; */
+    text-align: center;
+}
+
+.pmd-card-media.cust-img {
+    position: relative;
+    width: 100%;
+    height: 345px;
+    overflow: hidden;
+    background: #fff;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.pmd-card-media.cust-img-sec {
+    position: relative;
+    width: 100%;
+    height: 165px;
+    overflow: hidden;
+    background: #fff;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.pmd-content.logs-content {
+    margin-left: 0px;
+}
+
+.cust-sec-wrapper h2{
+    font-size: 18px;
+}
+
+.cust-sec-wrapper .inline-icon {
+    vertical-align: bottom;
+    font-size: 22px !important;
+}
+
+.cust-img img, .cust-img-sec img{
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    height: 100%;
+    width: auto !important;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.inline-icon {
+    vertical-align: bottom;
+    font-size: 28px !important;
+ }
+
+ .m-t-10{
+     margin-top: 10px;
+ }
+
+.pmd-navbar .floated-logo {
+    position: absolute;
+    left: 15px;
+    top: 4px;
+}
+
+div#datatables_length label, div#datatables_filter label {
+    display: inline-flex;
+    margin: 15px 10px 0 15px;
+}
+
+select.custom-select.custom-select-sm.form-control.form-control-sm, div#datatables_filter input.form-control {
+    margin: 0 10px;
+}
+
+div#datatables_filter {
+    text-align: right;
+}
+
+div#datatables_info {
+    margin: 20px 0 0 15px;
+}
+
+div.dataTables_wrapper div.dataTables_paginate {
+    margin-left: 0px;
+    text-align: right;
+}
+
+.table-responsive {
+    overflow-x: unset;
+}
+
+div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+    margin-right: 20px;
 }
 
 .popmsg {
