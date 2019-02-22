@@ -11,7 +11,7 @@
 				<div class="media-right media-middle"><i class="dic-more-vert dic"></i></div>
 			</a>
 			<ul class="dropdown-menu">
-				<li><a href="login.html">Logout</a></li>
+				<li><a href="<?php echo base_url().'auth/logout' ?>">Logout</a></li>
 			</ul>
 		</li><!-- End user info -->
 		

@@ -8,35 +8,48 @@ class Admin extends CI_Controller {
     }
 
 	public function index()
-	{
-		$this->load->view('welcome_message');
+	{	
+		if($this->session->has_userdata('admin_logged')){
+			$this->load->view('admin/dashboard');
+		} else {
+			redirect(base_url().'auth');
+		}
 	}
 
-    public function dashboard()
+  	public function dashboard()
 	{
 		$this->load->view('admin/dashboard');
     }
     
     /* Staffs */
-    public function view_staffs()
+  	public function view_staffs()
 	{
 		$this->load->view('admin/staffs/view_staffs');
     }
     
-    public function add_staff()
+  	public function add_staff()
 	{
 		$this->load->view('admin/staffs/add_staff');
     }
     
     /* Students */
     public function view_students()
-	{
-		$this->load->view('admin/students/view_students');
+	{	
+		if($this->session->has_userdata('admin_logged')){
+			$this->load->view('admin/students/view_students');
+		} else {
+			redirect(base_url().'auth');
+		}
     }
     
-    public function add_student()
-	{
-		$this->load->view('admin/students/add_student');
+  	public function add_student()
+	{	
+		if($this->session->has_userdata('admin_logged')){
+			$this->load->view('admin/students/add_student');
+		} else {
+			redirect(base_url().'auth');
+		}
+		
     }
     
     /* Teachers */

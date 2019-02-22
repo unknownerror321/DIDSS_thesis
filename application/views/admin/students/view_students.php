@@ -25,14 +25,15 @@
             <!--breadcrum start-->
             <ol class="breadcrumb text-left">
             <li><a href="index.html">Students</a></li>
-            <li class="active">Lists</li>
+            <li class="active">New Students</li>
             </ol><!--breadcrum end-->
         
             <div class="no-table-blank-state row">
                 <!--no table found blank state-->
                 <div class="col-lg-12 col-sm-12 col-xs-12">
+                    <a href="<?php echo base_url().'admin/add_student'?>" class="btn pmd-btn-raised pmd-ripple-effect btn-primary pull-right" type="button">New Student</a>
+                    <h2>Students List</h2>
                     <div id="card">
-                        <h2>Students List</h2>
                         <div class="component-box">
                             <!-- table card example -->
                             <div  class="pmd-card pmd-z-depth pmd-card-custom-view">

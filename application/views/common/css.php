@@ -7,7 +7,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="<?=base_url();?>assets/themes/images/favicon.ico">
 
     <!-- Google icon -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/fonts/pmd-fonts/pmd-font.css">
 
     <!-- Bootstrap css -->
     <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/css/bootstrap.min.css">
@@ -21,6 +22,7 @@
     <!-- Propeller admin theme css-->
     <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/themes/css/propeller-admin.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/css/style.css">
+    <input type="hidden" id="_base_url" value="<?= base_url() ?>">
     <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/components/data-table/css/pmd-datatable.css">
     <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"> -->
 

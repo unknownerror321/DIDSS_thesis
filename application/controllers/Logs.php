@@ -5,10 +5,9 @@ class Logs extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
-    }
-	
-	public function index(){
-        $this->load->view('logs/logs_view');
 	}
-
+	public function index(){
+		$this->load->view('logs/logs_view');
+	}
+	
 }
