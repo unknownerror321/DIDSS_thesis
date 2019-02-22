@@ -35,7 +35,9 @@
                     </div>
                 </div>
             </div>
+            <input id="_inputrfid" type="text" name="_inputrfid">
         </div>
+        
 		<div class="row">
             <div class="main-row">
                 <div class="col-md-6">
@@ -74,7 +76,6 @@
                                 </div>	
                             </div>
                         </div>
-                        
                     </div>   
                     <div class="row">
                         <div class="col-md-12 m-t-10">
