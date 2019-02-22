@@ -47,98 +47,71 @@
                             </div>
                         </div>
                     </div>
-                    <form id="validationForm" action="" method="post">
+                    <form id="" action="<?php echo base_url().'admin/insert_student'?>" method="post">
                         <div class="pmd-card pmd-z-depth">
                             <div class="pmd-card-body">
                                 <div class="group-fields clearfix row">
+                                    <div class="image-holder">
+                                    </div>
+                                </div>
+                                <div class="group-fields clearfix row">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                                            <label for="regular1" class="control-label">
-                                                RFID No*
-                                            </label>
-                                            <input type="text" id="" class="form-control" readonly>
+                                            <span>Profile Image*</span>
+                                            <input type="file" id="profile_image" name="profile_image" class="form-control" placeholder="RFID No." readonly>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="group-fields clearfix row">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                                            <label for="regular1" class="control-label">
-                                                Name*
-                                            </label>
-                                            <input type="text" id="regular1" class="form-control">
+                                            <input type="text" id="rfid_input_hldr" name="rfid_input_hldr" class="form-control" placeholder="RFID No." readonly required>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="group-fields clearfix row">
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                         <div class="form-group pmd-textfield pmd-textfield-floating-label">       
-                                            <label>City*</label>
-                                            <select class="select-simple form-control pmd-select2">
+                                            <label>Firstname*</label>
+                                            <input type="text" id="stud_fname" name="stud_fname" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">       
+                                            <label>Middlename*</label>
+                                            <input type="text" id="stud_mname" name="stud_mname" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                            <label for="regular1" class="control-label">
+                                                Lastname*
+                                            </label>
+                                            <input type="text" id="stud_lname" name="stud_lname" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group-fields clearfix row">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">       
+                                            <label>Gender*</label>
+                                            <select name="stud_gender" class="select-simple form-control pmd-select2" required>
                                                 <option></option>
-                                                <option>Dallas Cowboys</option>
+                                                <option value="0">Male</option>
+                                                <option value="1">Female</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                         <div class="form-group pmd-textfield pmd-textfield-floating-label">       
-                                            <label>State*</label>
-                                            <select class="select-simple form-control pmd-select2">
-                                                <option></option>
-                                                <option>Dallas Cowboys</option>
-                                                <option>New York Giants</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                                            <label for="regular1" class="control-label">
-                                                Zip Code*
-                                            </label>
-                                            <input type="text" id="regular1" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="group-fields clearfix row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                                            <label for="regular1" class="control-label">
-                                                Phone*
-                                            </label>
-                                            <input type="text" id="regular1" class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                                            <label for="regular1" class="control-label">
-                                                Email*
-                                            </label>
-                                            <input type="text" id="regular1" class="form-control">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="group-fields clearfix row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                                            <label class="control-label">Address</label>
-                                            <textarea required class="form-control"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="group-fields clearfix row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="checkbox pmd-default-theme">
-                                            <label class="pmd-checkbox checkbox-pmd-ripple-effect">
-                                                <input type="checkbox" value="">
-                                                <span>Save Details</span>
-                                            </label>
+                                            <label>Age*</label>
+                                            <input type="text" id="stud_age" name="stud_age" class="form-control" required>
                                         </div>
                                     </div>
                                 </div>
                             </div>		
                             <div class="pmd-card-actions">
-                                <a href="javascript:void(0);" class="btn btn-primary next">Submit</a>
-                                <a href="javascript:void(0);" class="btn btn-default">Cancel</a>
+                                <button type="submit" class="btn btn-primary next"> Add </button>
                             </div>
                         </div> <!-- section content end -->  
                     </form>

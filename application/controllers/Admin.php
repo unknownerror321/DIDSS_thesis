@@ -49,8 +49,12 @@ class Admin extends CI_Controller {
 		} else {
 			redirect(base_url().'auth');
 		}
-		
-    }
+	}
+	
+	public function insert_student(){
+		$newdatas = $this->admin_model->insert_student();
+		redirect(base_url().'admin/view_students');
+	}
     
     /* Teachers */
     public function view_teachers()

@@ -20,8 +20,9 @@ $(document).ready(function() {
 
 });
 $('#rfid_modal').on('shown.bs.modal', () => { $('#rfid_input').focus() } )
-$('#rfid_input').on('change', () => {
+$('#rfid_input').on('change', e => {
     $('#rfid_modal').modal('toggle')
+    $('#rfid_input_hldr').val(e.target.value);
 })
 
 var interval = setInterval(function() {
