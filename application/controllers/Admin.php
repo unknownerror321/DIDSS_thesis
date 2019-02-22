@@ -8,8 +8,12 @@ class Admin extends CI_Controller {
     }
 
 	public function index()
-	{
-		$this->load->view('welcome_message');
+	{	
+		if($this->session->has_userdata('admin_logged')){
+			$this->load->view('admin/home');
+		} else {
+			redirect(base_url().'auth');
+		}
 	}
 
 

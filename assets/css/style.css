@@ -16,3 +16,7 @@
 .text-white{
     color: #fff;
 }
+
+.popmsg {
+    display: none;
+}
