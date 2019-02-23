@@ -35,46 +35,57 @@
                     </div>
                 </div>
             </div>
+            <input id="_inputrfid" type="text" name="_inputrfid" autofocus>
         </div>
+        
 		<div class="row">
             <div class="main-row">
                 <div class="col-md-6">
                     <div class="pmd-card pmd-card-default pmd-z-depth">
                         <div class="pmd-card-media cust-img">
-                            <img src="http://propeller.in/assets/images/profile-pic.png">
+                            <img id="mImg" src="<?=base_url();?>assets/images/profile-pic.png">
                         </div>
                         <div class="pmd-card-title text-center">
-                            <h2 class="pmd-card-title-text"><i class="material-icons md-dark pmd-md inline-icon">account_circle</i> Churvabels Babols</h2>
-                            <span class="pmd-card-subtitle-text"><span id="idNum">100001</span> - <span id="type">Student</span></span>	
+                            <h2 class="pmd-card-title-text"><i class="material-icons md-dark pmd-md inline-icon">account_circle</i> <span id="fullname">Please Scan your RFID</span></h2>
+                            <span class="pmd-card-subtitle-text"><span id="rfidNum">RFID Number</span></span>	
                         </div>	
                     </div>
                 </div>
                 <div class="col-md-6">
-
-                    <div class="row">
-                        <div class="col-md-6">
+                    <div class="row" id="stock-logs">
+                        <div class="col-md-6" id="defRLogs">
                             <div class="pmd-card pmd-card-default pmd-z-depth cust-sec-wrapper">
                                 <div class="pmd-card-media cust-img-sec">
-                                    <img src="http://propeller.in/assets/images/profile-pic.png">
+                                    <img src="<?=base_url();?>assets/images/profile-pic.png">
+                                </div>
+                                <div class="pmd-card-title text-center">
+                                    <h2 class="pmd-card-title-text"><i class="material-icons md-dark pmd-md inline-icon">account_circle</i> Please Scan your RFID</h2>
+                                    <span class="pmd-card-subtitle-text"><span id="">RFID Number</span></span>	
+                                </div>	
+                            </div>
+                        </div> 
+                        <!-- <div class="col-md-6">
+                            <div class="pmd-card pmd-card-default pmd-z-depth cust-sec-wrapper">
+                                <div class="pmd-card-media cust-img-sec">
+                                    <img src="<?=base_url();?>assets/images/profile-pic.png">
+                                </div>
+                                <div class="pmd-card-title text-center">
+                                    <h2 class="pmd-card-title-text"><i class="material-icons md-dark pmd-md inline-icon">account_circle</i> <span id=""></span></h2>
+                                    <span class="pmd-card-subtitle-text"><span id="">100001</span></span>	
+                                </div>	
+                            </div>
+                        </div> -->
+                        <!-- <div class="col-md-6">
+                            <div class="pmd-card pmd-card-default pmd-z-depth cust-sec-wrapper">
+                                <div class="pmd-card-media cust-img-sec">
+                                    <img src="<?=base_url();?>assets/images/profile-pic.png">
                                 </div>
                                 <div class="pmd-card-title text-center">
                                     <h2 class="pmd-card-title-text"><i class="material-icons md-dark pmd-md inline-icon">account_circle</i> Churvabels Babols</h2>
-                                    <span class="pmd-card-subtitle-text"><span id="idNum">100001</span> - <span id="type">Student</span></span>	
+                                    <span class="pmd-card-subtitle-text"><span id="idNum">100001</span></span>	
                                 </div>	
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="pmd-card pmd-card-default pmd-z-depth cust-sec-wrapper">
-                                <div class="pmd-card-media cust-img-sec">
-                                    <img src="http://propeller.in/assets/images/profile-pic.png">
-                                </div>
-                                <div class="pmd-card-title text-center">
-                                    <h2 class="pmd-card-title-text"><i class="material-icons md-dark pmd-md inline-icon">account_circle</i> Churvabels Babols</h2>
-                                    <span class="pmd-card-subtitle-text"><span id="idNum">100001</span> - <span id="type">Student</span></span>	
-                                </div>	
-                            </div>
-                        </div>
-                        
+                        </div> -->
                     </div>   
                     <div class="row">
                         <div class="col-md-12 m-t-10">
@@ -83,26 +94,16 @@
                                     <table cellspacing="0" cellpadding="0" class="table" id="table-bootstrap">
                                         <thead>
                                             <tr>
+                                                <th>Name</th>
                                                 <th>Date</th>
                                                 <th>Time</th>
-                                                <th>Type</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>February 10, 2019</td>
-                                                <td>12:00 PM</td>
-                                                <td>Out</td>
-                                            </tr>
-                                            <tr>
-                                                <td>February 10, 2019</td>
-                                                <td>12:00 PM</td>
-                                                <td>Out</td>
-                                            </tr>
-                                            <tr>
-                                                <td>February 10, 2019</td>
-                                                <td>12:00 PM</td>
-                                                <td>Out</td>
+                                        <tbody id="table-logs">
+                                            <tr id="tblDef">
+                                                <td colspan="3">
+                                                    Hello! Please scan your RFID.
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>

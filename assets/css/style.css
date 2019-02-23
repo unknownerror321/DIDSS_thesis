@@ -160,3 +160,10 @@ i.fa.upload-icon {
 .acc-img:hover > i.fa.upload-icon {
     opacity: 1;
 }
+
+input#_inputrfid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}

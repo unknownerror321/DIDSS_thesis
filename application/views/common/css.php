@@ -18,11 +18,13 @@
 
     <!-- Propeller theme css-->
     <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/themes/css/propeller-theme.css" />
+  
 
     <!-- Propeller admin theme css-->
     <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/themes/css/propeller-admin.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/css/style.css">
     <input type="hidden" id="_base_url" value="<?= base_url() ?>">
     <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/components/data-table/css/pmd-datatable.css">
-
+    <link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/css/sweetalert.min.css" />
+    <input type="hidden" id="base_url" value="<?=base_url();?>">
 </head>
